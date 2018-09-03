@@ -1,0 +1,16 @@
+﻿<Window x:Class="MessageProcessor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Message Processor" Height="380" Width="525">
+    <Grid Margin="0,0,0,0" VerticalAlignment="Top">
+        <Label x:Name="lblMessage" Content="Message Content" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="267" Margin="117,10,0,-70" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <ComboBox x:Name="cmbPostType" HorizontalAlignment="Left" Margin="117,282,0,-97" VerticalAlignment="Top" Width="230">
+            <ComboBoxItem Content="Queue" IsSelected="True"/>
+            <ComboBoxItem Content="Topic Subscription - All Messages"/>
+            <ComboBoxItem Content="Topic Subscription - Filtered Messages"/>
+        </ComboBox>
+        <Label x:Name="lblPostType" Content="Get From" HorizontalAlignment="Left" Margin="10,280,0,-99" VerticalAlignment="Top"/>
+        <Button x:Name="btnGetMessage" Content="Get Message" HorizontalAlignment="Left" Margin="352,282,0,-131" VerticalAlignment="Top" Width="155" Height="56" Click="btnGetMessage_Click"/>
+    </Grid>
+</Window>

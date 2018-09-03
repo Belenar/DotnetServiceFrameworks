@@ -1,0 +1,47 @@
+*************
+   SERVER
+*************
+
+    <services>
+      <service name="WcfService.PersonService">
+          <endpoint contract="WcfService.IPersonService"
+                    binding="netTcpRelayBinding"
+                    address="sb://axxes-traineeship.servicebus.windows.net/personservice"
+                    behaviorConfiguration="sbTokenProvider"/>
+      </service>
+    </services>
+    <behaviors>
+        <endpointBehaviors>
+            <behavior name="sbTokenProvider">
+               <transportClientEndpointBehavior>
+                  <tokenProvider>
+                     <sharedAccessSignature keyName="RootManageSharedAccessKey" key="fyQbMGfzOfBh81RgAXIjO/r9Ucx8knkfi5EPMtqKETQ=" />
+                  </tokenProvider>
+               </transportClientEndpointBehavior>
+            </behavior>
+        </endpointBehaviors>
+    </behaviors>
+
+*************
+   CLIENT
+*************
+
+    <client>
+      <endpoint name="PersonServiceClient" contract="WcfService.IPersonService"
+                binding="netTcpRelayBinding"
+                address="sb://axxes-traineeship.servicebus.windows.net/personservice"
+                behaviorConfiguration="sbTokenProvider"/>
+    </client>
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="sbTokenProvider">
+           <transportClientEndpointBehavior>
+              <tokenProvider>
+                 <sharedAccessSignature keyName="RootManageSharedAccessKey" key="fyQbMGfzOfBh81RgAXIjO/r9Ucx8knkfi5EPMtqKETQ=" />
+              </tokenProvider>
+           </transportClientEndpointBehavior>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+
+Endpoint=sb://axxes-traineeship.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=fyQbMGfzOfBh81RgAXIjO/r9Ucx8knkfi5EPMtqKETQ=

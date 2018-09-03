@@ -1,0 +1,41 @@
+﻿@model PokerEventPlanner.Data.Model.Tournament
+
+@{
+    var tournament = Model;
+}
+
+<div>
+    <h1>@tournament.Name</h1>
+    <h3>@tournament.Location</h3>
+    <ul>
+        <li>
+            <b>Date: </b>
+            @tournament.Date.ToShortDateString() @tournament.Date.ToShortTimeString()
+        </li>
+        <li>
+            <b>Buy-in: </b>
+            € @tournament.BuyIn
+        </li>
+    </ul>
+    @if (tournament.Participants.Any())
+    {
+        <h3>Participants</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Participant</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var participant in tournament.Participants.OrderBy(x => x.Postition))
+                {
+                    <tr>
+                        <td>@participant.Player.FirstName @participant.Player.LastName</td>
+                        <td>@participant.Postition</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

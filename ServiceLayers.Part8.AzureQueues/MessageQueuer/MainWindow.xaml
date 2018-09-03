@@ -1,0 +1,19 @@
+﻿<Window x:Class="MessageQueuer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Message Queuer" Height="250" Width="525">
+    <Grid Margin="0,0,0,0" VerticalAlignment="Top">
+        <Label x:Name="lblMessage" Content="Message Content" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblProperty" Content="Property" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="108" Margin="117,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <TextBox x:Name="txtProperty" HorizontalAlignment="Left" Height="23" Margin="117,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390"/>
+        <ComboBox x:Name="cmbPostType" HorizontalAlignment="Left" Margin="117,151,0,0" VerticalAlignment="Top" Width="230">
+            <ComboBoxItem Content="Queue" IsSelected="True"/>
+            <ComboBoxItem Content="Topic (Filter = 1)"/>
+            <ComboBoxItem Content="Topic (Filter = 2)"/>
+        </ComboBox>
+        <Label x:Name="lblPostType" Content="Post Type" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnPostMessage" Content="Post Message" HorizontalAlignment="Left" Margin="352,151,0,0" VerticalAlignment="Top" Width="155" Height="56" Click="btnPostMessage_Click"/>
+
+    </Grid>
+</Window>
