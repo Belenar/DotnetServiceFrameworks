@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceHost", "WcfServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\WcfService.csproj", "{9711C8D0-049F-4F3E-8C21-ACDFF54C75E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandlingBehaviorLibrary", "ErrorHandlingBehaviorLibrary\ErrorHandlingBehaviorLibrary.csproj", "{21B42255-93E5-48B3-B2E1-317D9196F812}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +29,15 @@ Global
 		{9711C8D0-049F-4F3E-8C21-ACDFF54C75E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9711C8D0-049F-4F3E-8C21-ACDFF54C75E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9711C8D0-049F-4F3E-8C21-ACDFF54C75E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B42255-93E5-48B3-B2E1-317D9196F812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B42255-93E5-48B3-B2E1-317D9196F812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B42255-93E5-48B3-B2E1-317D9196F812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B42255-93E5-48B3-B2E1-317D9196F812}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65307468-0555-4E1C-A6C1-2F9759277D9D}
 	EndGlobalSection
 EndGlobal

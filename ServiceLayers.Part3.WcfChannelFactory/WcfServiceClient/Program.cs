@@ -1,5 +1,6 @@
 ﻿using System;
-using WcfServiceClient.PersonServiceProxy;
+using System.ServiceModel;
+using WcfService;
 
 namespace WcfServiceClient
 {
@@ -7,8 +8,10 @@ namespace WcfServiceClient
     {
         static void Main()
         {
-            using (var client = new PersonServiceClient())
+            using (var factory = new ChannelFactory<IPersonService>("PersonServiceClient"))
             {
+                var client = factory.CreateChannel();
+
                 var consultantList = client.GetConsultants();
 
                 foreach (var consultant in consultantList)

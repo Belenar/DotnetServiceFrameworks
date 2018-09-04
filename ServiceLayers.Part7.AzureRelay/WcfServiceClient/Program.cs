@@ -10,13 +10,21 @@ namespace WcfServiceClient
         {
             using (var channelFactory = new ChannelFactory<IPersonService>("PersonServiceClient"))
             {
-                var serviceClient = channelFactory.CreateChannel();
+                var stop = false;
 
-                var consultantList = serviceClient.GetConsultants();
-
-                foreach (var consultant in consultantList)
+                while (!stop)
                 {
-                    Console.WriteLine($"{consultant.FirstName} {consultant.LastName}");
+                    var serviceClient = channelFactory.CreateChannel();
+
+                    var consultantList = serviceClient.GetConsultants();
+
+                    foreach (var consultant in consultantList)
+                    {
+                        Console.WriteLine($"{consultant.FirstName} {consultant.LastName}");
+                    }
+
+                    if (Console.ReadKey().Key == ConsoleKey.Q)
+                        stop = true;
                 }
             }
 

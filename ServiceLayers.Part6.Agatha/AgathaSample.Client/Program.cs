@@ -14,11 +14,22 @@ namespace AgathaSample.Client
             var requestDispatcher = IoC.Container.Resolve<IRequestDispatcher>();
 
             var youngConsultantsRequest = new GetConsultantsRequest { MaximumAge = 25 };
+            var mediumConsultantsRequest = new GetConsultantsRequest { MinimumAge = 25, MaximumAge = 30 };
 
-            var response = requestDispatcher.Get<GetConsultantsResponse>(youngConsultantsRequest);
+            requestDispatcher.Add("youngOnes", youngConsultantsRequest);
+            requestDispatcher.Add("mediumOnes", mediumConsultantsRequest);
+
+            var youngResponse = requestDispatcher.Get<GetConsultantsResponse>("youngOnes");
+            var mediumResponse = requestDispatcher.Get<GetConsultantsResponse>("mediumOnes");
 
             Console.WriteLine("Young Consultants:");
-            foreach (var consultant in response.Consultants)
+            foreach (var consultant in youngResponse.Consultants)
+            {
+                Console.WriteLine($"{consultant.FirstName} {consultant.LastName}");
+            }
+
+            Console.WriteLine("Medium Consultants:");
+            foreach (var consultant in mediumResponse.Consultants)
             {
                 Console.WriteLine($"{consultant.FirstName} {consultant.LastName}");
             }

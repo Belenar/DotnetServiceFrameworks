@@ -1,10 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ServiceModel;
+using System.Threading;
+using ErrorHandlingBehaviorLibrary;
 
 namespace WcfService
 {
+    [ServiceBehavior]
+    [ErrorHandlingBehavior]
     public class PersonService : IPersonService
     {
+        public PersonService()
+        {
+            Console.WriteLine("New PersonService created.");
+        }
+
         private readonly List<Person> _consultants = new List<Person>
             {
                 new Person {FirstName = "Andy", LastName = "Smet", BirthDay = new DateTime(1982, 1, 1), TrackParticipant = false},
@@ -32,6 +42,20 @@ namespace WcfService
         public ICollection<Person> GetConsultants()
         {
             return _consultants;
+        }
+
+        public void OneWayCall(int input)
+        {
+            // Simulate long running operation
+            Thread.Sleep(5000);
+        }
+ 
+        public int Divide(int number, int divider)
+        {
+            if(divider == 0)
+                throw new DivideByZeroException("Wie deelt door nul is een snul!");
+
+            return number / divider;
         }
     }
 }

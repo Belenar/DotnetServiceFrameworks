@@ -31,6 +31,7 @@ namespace WcfService
 
         public ICollection<Person> GetConsultants()
         {
+            Console.WriteLine("Called");
             return _consultants;
         }
     }

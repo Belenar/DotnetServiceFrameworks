@@ -12,6 +12,19 @@ namespace WcfServiceClient
             {
                 var client = channelFactory.CreateChannel();
 
+                Console.WriteLine("Starting ...");
+
+                try
+                {
+                    var result = client.Divide(100, 0);
+                }
+                catch (FaultException<DivideByZeroFaultInformation> e)
+                {
+                    Console.WriteLine($"Exception: {e.Detail.Message}");
+                }
+
+                client.OneWayCall(10);
+
                 var consultantList = client.GetConsultants();
 
                 foreach (var consultant in consultantList)

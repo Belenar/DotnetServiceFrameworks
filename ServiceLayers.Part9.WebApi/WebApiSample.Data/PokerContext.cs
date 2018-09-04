@@ -50,82 +50,82 @@ namespace WebApiSample.Data
 
             tournament1.Participants.AddRange(new[]
             {
-                new Participant {Id =  1, Player = playerAs,   Tournament = tournament1, Postition = 1},
-                new Participant {Id =  2, Player = playerBb,   Tournament = tournament1, Postition = 2},
-                new Participant {Id =  3, Player = playerBd,   Tournament = tournament1, Postition = 3},
-                new Participant {Id =  4, Player = playerFd,   Tournament = tournament1, Postition = 4},
-                new Participant {Id =  5, Player = playerHl,   Tournament = tournament1, Postition = 5},
-                new Participant {Id =  6, Player = playerJvdv, Tournament = tournament1, Postition = 6}
+                new Participant {Id =  1, Player = playerAs,   Tournament = tournament1, Position = 1},
+                new Participant {Id =  2, Player = playerBb,   Tournament = tournament1, Position = 2},
+                new Participant {Id =  3, Player = playerBd,   Tournament = tournament1, Position = 3},
+                new Participant {Id =  4, Player = playerFd,   Tournament = tournament1, Position = 4},
+                new Participant {Id =  5, Player = playerHl,   Tournament = tournament1, Position = 5},
+                new Participant {Id =  6, Player = playerJvdv, Tournament = tournament1, Position = 6}
             });
 
             tournament2.Participants.AddRange(new[]
             {
-                new Participant {Id =  7, Player = playerJv,   Tournament = tournament2, Postition = 1},
-                new Participant {Id =  8, Player = playerJk,   Tournament = tournament2, Postition = 2},
-                new Participant {Id =  9, Player = playerJs,   Tournament = tournament2, Postition = 3},
-                new Participant {Id = 10, Player = playerJve,  Tournament = tournament2, Postition = 4},
-                new Participant {Id = 11, Player = playerKl,   Tournament = tournament2, Postition = 5},
-                new Participant {Id = 12, Player = playerKb,   Tournament = tournament2, Postition = 6}
+                new Participant {Id =  7, Player = playerJv,   Tournament = tournament2, Position = 1},
+                new Participant {Id =  8, Player = playerJk,   Tournament = tournament2, Position = 2},
+                new Participant {Id =  9, Player = playerJs,   Tournament = tournament2, Position = 3},
+                new Participant {Id = 10, Player = playerJve,  Tournament = tournament2, Position = 4},
+                new Participant {Id = 11, Player = playerKl,   Tournament = tournament2, Position = 5},
+                new Participant {Id = 12, Player = playerKb,   Tournament = tournament2, Position = 6}
             });
 
             tournament3.Participants.AddRange(new[]
             {
-                new Participant {Id = 13, Player = playerKv,   Tournament = tournament3, Postition = 1},
-                new Participant {Id = 14, Player = playerMv,   Tournament = tournament3, Postition = 2},
-                new Participant {Id = 15, Player = playerMj,   Tournament = tournament3, Postition = 3},
-                new Participant {Id = 16, Player = playerRv,   Tournament = tournament3, Postition = 4},
-                new Participant {Id = 17, Player = playerSr,   Tournament = tournament3, Postition = 5},
-                new Participant {Id = 18, Player = playerTvl,  Tournament = tournament3, Postition = 6}
+                new Participant {Id = 13, Player = playerKv,   Tournament = tournament3, Position = 1},
+                new Participant {Id = 14, Player = playerMv,   Tournament = tournament3, Position = 2},
+                new Participant {Id = 15, Player = playerMj,   Tournament = tournament3, Position = 3},
+                new Participant {Id = 16, Player = playerRv,   Tournament = tournament3, Position = 4},
+                new Participant {Id = 17, Player = playerSr,   Tournament = tournament3, Position = 5},
+                new Participant {Id = 18, Player = playerTvl,  Tournament = tournament3, Position = 6}
             });
 
             tournament4.Participants.AddRange(new[]
             {
-                new Participant {Id = 19, Player = playerTdw,  Tournament = tournament4, Postition = 1},
-                new Participant {Id = 20, Player = playerAs,   Tournament = tournament4, Postition = 2},
-                new Participant {Id = 21, Player = playerBb,   Tournament = tournament4, Postition = 3},
-                new Participant {Id = 22, Player = playerBd,   Tournament = tournament4, Postition = 4},
-                new Participant {Id = 23, Player = playerFd,   Tournament = tournament4, Postition = 5},
-                new Participant {Id = 24, Player = playerHl,   Tournament = tournament4, Postition = 6}
+                new Participant {Id = 19, Player = playerTdw,  Tournament = tournament4, Position = 1},
+                new Participant {Id = 20, Player = playerAs,   Tournament = tournament4, Position = 2},
+                new Participant {Id = 21, Player = playerBb,   Tournament = tournament4, Position = 3},
+                new Participant {Id = 22, Player = playerBd,   Tournament = tournament4, Position = 4},
+                new Participant {Id = 23, Player = playerFd,   Tournament = tournament4, Position = 5},
+                new Participant {Id = 24, Player = playerHl,   Tournament = tournament4, Position = 6}
             });
 
             tournament5.Participants.AddRange(new[]
             {
-                new Participant {Id = 25, Player = playerJvdv, Tournament = tournament5, Postition = 1},
-                new Participant {Id = 26, Player = playerJv,   Tournament = tournament5, Postition = 2},
-                new Participant {Id = 27, Player = playerJk,   Tournament = tournament5, Postition = 3},
-                new Participant {Id = 28, Player = playerJs,   Tournament = tournament5, Postition = 4},
-                new Participant {Id = 29, Player = playerJve,  Tournament = tournament5, Postition = 5},
-                new Participant {Id = 30, Player = playerKl,   Tournament = tournament5, Postition = 6}
+                new Participant {Id = 25, Player = playerJvdv, Tournament = tournament5, Position = 1},
+                new Participant {Id = 26, Player = playerJv,   Tournament = tournament5, Position = 2},
+                new Participant {Id = 27, Player = playerJk,   Tournament = tournament5, Position = 3},
+                new Participant {Id = 28, Player = playerJs,   Tournament = tournament5, Position = 4},
+                new Participant {Id = 29, Player = playerJve,  Tournament = tournament5, Position = 5},
+                new Participant {Id = 30, Player = playerKl,   Tournament = tournament5, Position = 6}
             });                                                
                                                                
             tournament6.Participants.AddRange(new[]            
             {                                                  
-                new Participant {Id = 31, Player = playerKb,   Tournament = tournament6, Postition = 1},
-                new Participant {Id = 32, Player = playerJs,   Tournament = tournament6, Postition = 2},
-                new Participant {Id = 33, Player = playerKl,   Tournament = tournament6, Postition = 3},
-                new Participant {Id = 34, Player = playerKb,   Tournament = tournament6, Postition = 4},
-                new Participant {Id = 35, Player = playerKv,   Tournament = tournament6, Postition = 5},
-                new Participant {Id = 36, Player = playerMj,   Tournament = tournament6, Postition = 6}
+                new Participant {Id = 31, Player = playerKb,   Tournament = tournament6, Position = 1},
+                new Participant {Id = 32, Player = playerJs,   Tournament = tournament6, Position = 2},
+                new Participant {Id = 33, Player = playerKl,   Tournament = tournament6, Position = 3},
+                new Participant {Id = 34, Player = playerKb,   Tournament = tournament6, Position = 4},
+                new Participant {Id = 35, Player = playerKv,   Tournament = tournament6, Position = 5},
+                new Participant {Id = 36, Player = playerMj,   Tournament = tournament6, Position = 6}
             });                                                
                                                                
             tournament7.Participants.AddRange(new[]            
             {                                                  
-                new Participant {Id = 37, Player = playerKb,   Tournament = tournament7, Postition = 1},
-                new Participant {Id = 38, Player = playerKv,   Tournament = tournament7, Postition = 2},
-                new Participant {Id = 39, Player = playerMv,   Tournament = tournament7, Postition = 3},
-                new Participant {Id = 40, Player = playerMj,   Tournament = tournament7, Postition = 4},
-                new Participant {Id = 41, Player = playerRv,   Tournament = tournament7, Postition = 5},
-                new Participant {Id = 42, Player = playerSr,   Tournament = tournament7, Postition = 6}
+                new Participant {Id = 37, Player = playerKb,   Tournament = tournament7, Position = 1},
+                new Participant {Id = 38, Player = playerKv,   Tournament = tournament7, Position = 2},
+                new Participant {Id = 39, Player = playerMv,   Tournament = tournament7, Position = 3},
+                new Participant {Id = 40, Player = playerMj,   Tournament = tournament7, Position = 4},
+                new Participant {Id = 41, Player = playerRv,   Tournament = tournament7, Position = 5},
+                new Participant {Id = 42, Player = playerSr,   Tournament = tournament7, Position = 6}
             });                                                
                                                                
             tournament8.Participants.AddRange(new[]            
             {                                                  
-                new Participant {Id = 43, Player = playerTvl,  Tournament = tournament8, Postition = 1},
-                new Participant {Id = 44, Player = playerTdw,  Tournament = tournament8, Postition = 2},
-                new Participant {Id = 45, Player = playerAs,   Tournament = tournament8, Postition = 3},
-                new Participant {Id = 46, Player = playerBb,   Tournament = tournament8, Postition = 4},
-                new Participant {Id = 47, Player = playerBd,   Tournament = tournament8, Postition = 5},
-                new Participant {Id = 48, Player = playerFd,   Tournament = tournament8, Postition = 6}
+                new Participant {Id = 43, Player = playerTvl,  Tournament = tournament8, Position = 1},
+                new Participant {Id = 44, Player = playerTdw,  Tournament = tournament8, Position = 2},
+                new Participant {Id = 45, Player = playerAs,   Tournament = tournament8, Position = 3},
+                new Participant {Id = 46, Player = playerBb,   Tournament = tournament8, Position = 4},
+                new Participant {Id = 47, Player = playerBd,   Tournament = tournament8, Position = 5},
+                new Participant {Id = 48, Player = playerFd,   Tournament = tournament8, Position = 6}
             });
             
             tournament9.Participants.AddRange(new[]            

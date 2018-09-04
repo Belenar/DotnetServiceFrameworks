@@ -14,5 +14,7 @@ namespace WcfService
         public DateTime BirthDay { get; set; }
         [DataMember]
         public bool TrackParticipant { get; set; }
+        [DataMember]
+        public bool HasHisOwnEmoji { get; set; }
     }
 }

@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\WcfService.Person.datasource" />
     <None Include="Service References\PersonServiceProxy\item.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -65,12 +66,15 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\PersonServiceProxy\PersonService.wsdl" />
-    <None Include="Service References\PersonServiceProxy\WcfServiceClient.PersonServiceProxy.Person.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WcfService\WcfService.csproj">
+      <Project>{9711c8d0-049f-4f3e-8c21-acdff54c75e4}</Project>
+      <Name>WcfService</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\PersonServiceProxy\" />

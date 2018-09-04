@@ -9,112 +9,17 @@
 //------------------------------------------------------------------------------
 
 namespace WcfServiceClient.PersonServiceProxy {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
-    [System.SerializableAttribute()]
-    public partial class Person : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime BirthDayField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool TrackParticipantField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime BirthDay {
-            get {
-                return this.BirthDayField;
-            }
-            set {
-                if ((this.BirthDayField.Equals(value) != true)) {
-                    this.BirthDayField = value;
-                    this.RaisePropertyChanged("BirthDay");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FirstName {
-            get {
-                return this.FirstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
-                    this.FirstNameField = value;
-                    this.RaisePropertyChanged("FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LastName {
-            get {
-                return this.LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
-                    this.LastNameField = value;
-                    this.RaisePropertyChanged("LastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool TrackParticipant {
-            get {
-                return this.TrackParticipantField;
-            }
-            set {
-                if ((this.TrackParticipantField.Equals(value) != true)) {
-                    this.TrackParticipantField = value;
-                    this.RaisePropertyChanged("TrackParticipant");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PersonServiceProxy.IPersonService")]
     public interface IPersonService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonService/GetConsultants", ReplyAction="http://tempuri.org/IPersonService/GetConsultantsResponse")]
-        WcfServiceClient.PersonServiceProxy.Person[] GetConsultants();
+        System.Collections.Generic.List<WcfService.Person> GetConsultants();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPersonService/GetConsultants", ReplyAction="http://tempuri.org/IPersonService/GetConsultantsResponse")]
-        System.Threading.Tasks.Task<WcfServiceClient.PersonServiceProxy.Person[]> GetConsultantsAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WcfService.Person>> GetConsultantsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -144,11 +49,11 @@ namespace WcfServiceClient.PersonServiceProxy {
                 base(binding, remoteAddress) {
         }
         
-        public WcfServiceClient.PersonServiceProxy.Person[] GetConsultants() {
+        public System.Collections.Generic.List<WcfService.Person> GetConsultants() {
             return base.Channel.GetConsultants();
         }
         
-        public System.Threading.Tasks.Task<WcfServiceClient.PersonServiceProxy.Person[]> GetConsultantsAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WcfService.Person>> GetConsultantsAsync() {
             return base.Channel.GetConsultantsAsync();
         }
     }

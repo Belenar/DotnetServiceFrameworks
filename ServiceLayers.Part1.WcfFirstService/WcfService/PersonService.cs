@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WcfService
 {
-    class PersonService : IPersonService
+    public class PersonService : IPersonService
     {
         private readonly List<Person> _consultants = new List<Person>
             {

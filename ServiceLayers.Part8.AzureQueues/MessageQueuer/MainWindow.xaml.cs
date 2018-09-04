@@ -53,7 +53,15 @@ namespace MessageQueuer
 
             var client = QueueClient.CreateFromConnectionString(_connectionString, MyConventions.QueueName);
 
-            var message = new BrokeredMessage(txtMessage.Text);
+            var content = new MessageContent
+            {
+                TextContent = txtMessage.Text,
+                PublishDate = DateTime.Now
+            };
+
+            var message = new BrokeredMessage(content);
+            message.ContentType = nameof(MessageContent);
+            //var message = new BrokeredMessage(txtMessage.Text);
 
             message.Properties[MyConventions.PropertyName] = txtProperty.Text;
 

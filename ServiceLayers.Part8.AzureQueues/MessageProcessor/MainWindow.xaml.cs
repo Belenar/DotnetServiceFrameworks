@@ -48,10 +48,11 @@ namespace MessageProcessor
             {
                 try
                 {
+                    var content = message.GetBody<MessageContent>();
                     // Show the message
                     var sb = new StringBuilder();
                     sb.AppendLine("Body:");
-                    sb.AppendLine(message.GetBody<string>());
+                    sb.AppendLine(content.TextContent);
                     sb.AppendLine("");
                     sb.AppendLine("MessageID:");
                     sb.AppendLine(message.MessageId);

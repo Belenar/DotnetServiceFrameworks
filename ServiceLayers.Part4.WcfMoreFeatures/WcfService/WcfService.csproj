@@ -42,10 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DivideByZeroFaultInformation.cs" />
     <Compile Include="IPersonService.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PersonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ErrorHandlingBehaviorLibrary\ErrorHandlingBehaviorLibrary.csproj">
+      <Project>{21B42255-93E5-48B3-B2E1-317D9196F812}</Project>
+      <Name>ErrorHandlingBehaviorLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
